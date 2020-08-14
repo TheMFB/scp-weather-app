@@ -16,3 +16,16 @@ router.get('/', function(req, res, next) {
 });
 
 module.exports = router;
+
+// TODO(MFB): Store this key instead of hard-coding it.
+// API Key:
+// KA4ZarG8l51ftA2mMvKT31uxoEbjq6tQ
+
+// TODO(MFB): Sends request out for zip. Gets back location information
+// TODO(MFB): Sends followup for weather data Forecast API
+// TODO(MFB): Returns both requests.
+// TODO(MFB): Errors out appropriately
+// TODO(MFB): Documentation
+// TODO(MFB): Make tests
+
+// TODO(MFB): Set up on Heroku.
