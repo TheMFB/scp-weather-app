@@ -11,10 +11,6 @@ var requestOptions = {
     redirect: 'follow'
 };
 
-const formatWeather = (weather) => {
-
-}
-
 exports.getWeather = (locationKey) => {
     return new Promise((resolve, reject) => {
         const weatherPath = `forecasts/v1/daily/5day/${locationKey}?apikey=${apiKey}`;

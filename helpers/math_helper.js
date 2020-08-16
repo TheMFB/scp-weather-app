@@ -1,11 +1,20 @@
-
-// TODO(MFB): Format and export these.
-// Index.js contains the logic
-// input.js exports the list of numbers.
-// index should import the numbers from input.js
-
-// Mean, median, mode should all be separate functions.
-export const mean = (...numbers) => numbers.reduce((acc, val) => acc + val, 0) / numbers.length;
+/**
+ * The "mean" is the "average" you're used to, where you add up all the numbers
+ * and then divide by the number of numbers.
+ *
+ * For example, the "mean" of [3, 5, 4, 4, 1, 1, 2, 3] is 2.875.
+ *
+ * @param {Array} numbers An array of numbers.
+ * @return {Number} The calculated average (or mean) value from the specified
+ *     numbers.
+ */
+exports.mean = (numbers) => {
+  var total = 0, i;
+  for (i = 0; i < numbers.length; i += 1) {
+      total += numbers[i];
+  }
+  return total / numbers.length;
+}
 
 /**
  * The "median" is the "middle" value in the list of numbers.
@@ -13,7 +22,7 @@ export const mean = (...numbers) => numbers.reduce((acc, val) => acc + val, 0) /
  * @param {Array} numbers An array of numbers.
  * @return {Number} The calculated median value from the specified numbers.
  */
-export const median = arr => {
+exports.median = (arr) => {
   const mid = Math.floor(arr.length / 2),
     nums = [...arr].sort((a, b) => a - b);
   return arr.length % 2 !== 0 ? nums[mid] : (nums[mid - 1] + nums[mid]) / 2;
@@ -27,10 +36,7 @@ export const median = arr => {
 * @param {Array} numbers An array of numbers.
 * @return {Array} The mode of the specified numbers.
 */
-export function mode(numbers) {
-  // as result can be bimodal or multi-modal,
-  // the returned result is provided as an array
-  // mode of [3, 5, 4, 4, 1, 1, 2, 3] = [1, 3, 4]
+exports.mode = (numbers) => {
   var modes = [], count = [], i, number, maxIndex = 0;
 
   for (i = 0; i < numbers.length; i += 1) {
