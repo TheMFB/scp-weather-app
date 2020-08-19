@@ -12,7 +12,7 @@ describe('WeatherForm Component', () => {
     };
 
     const jsonOk = (body) => {
-        var mockResponse = new window.Response(JSON.stringify(body), { //the fetch API returns a resolved window Response object
+        var mockResponse = new window.Response(JSON.stringify(body), {
             status: 200,
             headers: {
                 'Content-type': 'application/json'

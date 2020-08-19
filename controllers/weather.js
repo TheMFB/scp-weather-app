@@ -4,8 +4,6 @@ var fetch = require('node-fetch');
 const apiKey = 'KA4ZarG8l51ftA2mMvKT31uxoEbjq6tQ'
 const host = 'http://dataservice.accuweather.com/';
 
-// TODO(MFB): data isNotEmpty?
-
 var requestOptions = {
     method: 'GET',
     redirect: 'follow'

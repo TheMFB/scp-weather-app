@@ -3,8 +3,9 @@ var weather = require('./weather.js');
 var math_helper = require('../helpers/math_helper');
 const mock_data = require('../helpers/mock_data');
 
-// TODO(MFB): data isNotEmpty?
-// TODO(MFB): Install lodash.
+// TODO(): Install lodash to make deep checks cleaner.
+
+// Takes in the weather object and returns a dictionary of multiple averages.
 const formatWeather = (weather) => {
     const weatherLowReduced = weather.DailyForecasts.reduce((acc, item) => [...(acc || []), item.Temperature.Minimum.Value], []);
     const weatherMidReduced = weather.DailyForecasts.reduce((acc, item) => [...(acc || []), (item.Temperature.Minimum.Value + item.Temperature.Maximum.Value)/2], []);
@@ -32,7 +33,7 @@ const formatWeather = (weather) => {
 exports.getAverages = (location_req) => {
     return locations.getLocations(location_req).then((locationsResults) => {
         if (locationsResults && locationsResults.Message === 'The allowed number of requests has been exceeded.') {
-            return {averages: mock_data.averages, error_message: 'The allowed number of requests has been exceeded.'}
+            return {averages: mock_data.averages, error_message: 'max_requests_exceeded'}
         }
         if (!locationsResults || !locationsResults[0] || !locationsResults[0].Key) return;
         return weather.getWeather(locationsResults[0].Key).then((weatherResults) =>{

@@ -9,6 +9,3 @@ router.get('/', function (req, res, next) {
 });
 
 module.exports = router;
-
-// TODO(MFB): Store apikey instead of hard-coding it.
-

@@ -21,19 +21,14 @@ const WeatherForm = ({
         return `?${searchParams.toString()}`;
     };
 
-
     const getWeather = () => {
         const data = {
             zip: zip
         };
-        // const host = 'https://scp-weather-server.herokuapp.com:5000/';
-        // const host = 'http://localhost:5000';
         const host = '/';
         const path = 'weather/';
 
-
         const paramString = data ? paramStringFromObject(data) : '';
-        console.log('---- `${host}${path}${paramString}`:', `${host}${path}${paramString}`);
 
         fetch(`${host}${path}${paramString}`, {
             method: 'GET'
