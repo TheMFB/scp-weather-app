@@ -26,7 +26,7 @@ const WeatherForm = ({
         const data = {
             zip: zip
         };
-        const host = 'https://scp-weather-server.herokuapp.com:5000';
+        const host = 'https://scp-weather-server.herokuapp.com';
         const path = '';
 
         const paramString = data ? paramStringFromObject(data) : '';
