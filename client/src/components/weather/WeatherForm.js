@@ -34,7 +34,11 @@ const WeatherForm = ({
             method: 'GET'
         })
             .then(res => res.json())
-            .then(weather => setWeather({ weather: weather.averages }))
+            .then(weather => setWeather(
+                {
+                    weather: weather.averages,
+                    error_message: weather.error_message || null
+                }))
             .catch((e) => console.log('Uh oh!', e))
     }
 

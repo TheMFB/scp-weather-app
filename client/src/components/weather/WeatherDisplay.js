@@ -55,7 +55,7 @@ const WeatherDisplay = ({
                             </TableBody>
                         </Table>
                     </TableContainer>
-                    {weatherData.error_message === 'max_requests_exceeded' && (
+                    {weatherData.error_message && (
                         <Typography component="h1" variant="subtitle2" color="error">
                             * The 24-hour request limit for this account was exceeded. The above is sadly mock data. Please wait or trust me.
                         </Typography>
