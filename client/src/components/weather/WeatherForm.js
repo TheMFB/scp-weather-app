@@ -28,6 +28,7 @@ const WeatherForm = ({
         };
         const host = 'https://scp-weather-server.herokuapp.com';
         const path = '';
+        console.log('---- `${host}${path}${paramString}`:', `${host}${path}${paramString}`);
 
         const paramString = data ? paramStringFromObject(data) : '';
 
