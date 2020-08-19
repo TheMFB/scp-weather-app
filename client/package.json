@@ -24,7 +24,7 @@
       "^.+\\.jsx?$": "babel-jest"
     }
   },
-  "proxy": "http://localhost:5001",
+  "proxy": "http://localhost:5000",
   "eslintConfig": {
     "extends": "react-app"
   },
