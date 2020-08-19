@@ -11,9 +11,4 @@ router.get('/', function (req, res, next) {
 module.exports = router;
 
 // TODO(MFB): Store apikey instead of hard-coding it.
-// TODO(MFB): Errors out appropriately
-// TODO(MFB): Documentation
-// TODO(MFB): Make tests
-
-// TODO(MFB): Set up on Heroku.
 
