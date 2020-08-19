@@ -30,7 +30,9 @@ const formatWeather = (weather) => {
 
 exports.getAverages = (location_req) => {
     return locations.getLocations(location_req).then((locationsResults) => {
+        if (!locationsResults || !locationsResults[0] || !locationsResults[0].Key) return;
         return weather.getWeather(locationsResults[0].Key).then((weatherResults) =>{
+            if (!weatherResults || !weatherResults.DailyForecasts) return;
             return {
                 averages: formatWeather(weatherResults),
                 location: locationsResults,
