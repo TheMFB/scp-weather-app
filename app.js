@@ -22,9 +22,8 @@ app.use(cookieParser());
 // app.use(express.static(path.join(__dirname, 'public')));
 app.use(express.static(path.join(__dirname, 'client/build')));
 
-
 app.use('/weather', indexRouter);
-// app.use('/*', indexRouter);
+app.use('/*', indexRouter);
 
 // The "catchall" handler: for any request that doesn't
 // match one above, send back React's index.html file.
