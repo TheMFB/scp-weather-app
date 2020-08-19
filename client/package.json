@@ -24,7 +24,7 @@
       "^.+\\.jsx?$": "babel-jest"
     }
   },
-  "proxy": "https://scp-weather-server.herokuapp.com:5000",
+  "proxy": "http://localhost:5000",
   "eslintConfig": {
     "extends": "react-app"
   },
